@@ -1,4 +1,4 @@
-const products = [
+const productsData = [
     {
         id: 1,
         title: "Men Casual Round Neck T-Shirt",
@@ -159,4 +159,6 @@ const products = [
             }
         ]
     }
-];
+]
+
+export { productsData };
