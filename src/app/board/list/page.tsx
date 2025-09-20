@@ -24,7 +24,6 @@ const ProductItem = (props: ProductTy) => {
   const x = useRouter();
 
   const handleForwadProductDetailPage = (id: number) => {
-    console.log('id %s', id);
     x.push(`/board/product-detail/${id}`);
   }
 
