@@ -1,7 +1,8 @@
 'use client';
 
 import { useRouter } from "next/navigation";
-
+// Zustand
+import useShoppingCart from "@/store/useShoppingCart";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 // Remix Icon
@@ -31,15 +32,16 @@ export default function RootLayout({
 }>) {
   
   const x = useRouter();
+  const { addItems } = useShoppingCart();
 
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <nav>
           <a href="#" onClick={ () => x.push('/') } className="logo">Ecommerce.</a>
-          <a href='cart.html' className="cart-icon">
+          <a href="#" className="cart-icon" onClick={ () => x.push('/board/cart') }>
             <RiShoppingBagLine size={36} color="black" className=""/>
-            <span className='cart-item-count'>4</span>
+            <span className='cart-item-count'>{addItems.length}</span>
           </a>
         </nav>
         {children}

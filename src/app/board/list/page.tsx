@@ -1,23 +1,13 @@
 'use client';
 
-// DATA
-import { productsData } from '@/data/products.js';
-// CSS
-import styles from './page.module.scss';
 import { useRouter } from 'next/navigation';
 
-interface ProductTy {
-  id: number,
-  title: string,
-  price: string,
-  description: string,
-  colors: [{
-    name: string,
-    mainImage: string,
-    thumbnails: [],
-    sizes: []
-  }],
-}
+// DATA
+import { productsData } from '@/data/products.js';
+// TYPE'S 
+import { ProductTy, ColorsTy } from '@/types';
+// CSS
+import styles from './page.module.scss';
 
 const ProductItem = (props: ProductTy) => {
 
@@ -33,7 +23,7 @@ const ProductItem = (props: ProductTy) => {
           <img src={"/"+props.colors[0].mainImage} />
       </div>
       <h2 className={styles.title}>{props.title}</h2>
-      <span className={styles.price}>{props.price}</span>
+      <span className={styles.price}>${props.price}</span>
     </div>
   )
 }

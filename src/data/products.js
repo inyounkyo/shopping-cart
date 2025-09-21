@@ -2,7 +2,7 @@ const productsData = [
     {
         id: 1,
         title: "Men Casual Round Neck T-Shirt",
-        price: "$100",
+        price: "100",
         description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam laborum aut explicabo molestias voluptas, eum nulla doloremque laboriosam. Accusantium omnis illum nulla architecto doloribus.",
         colors: [
             {
@@ -60,7 +60,7 @@ const productsData = [
     {
         id: 2,
         title: "Men Slim Fit Turtleneck Sweater",
-        price: "$50",
+        price: "50",
         description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam laborum aut explicabo molestias voluptas, eum nulla doloremque laboriosam. Accusantium omnis illum nulla architecto doloribus.",
         colors: [
             {
@@ -78,7 +78,7 @@ const productsData = [
     {
         id: 3,
         title: "Men Striped Polo Shirt",
-        price: "$20",
+        price: "20",
         description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam laborum aut explicabo molestias voluptas, eum nulla doloremque laboriosam. Accusantium omnis illum nulla architecto doloribus.",
         colors: [
             {
@@ -92,7 +92,7 @@ const productsData = [
     {
         id: 4,
         title: "Men Casual Long Sleeve Polo",
-        price: "$125",
+        price: "125",
         description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam laborum aut explicabo molestias voluptas, eum nulla doloremque laboriosam. Accusantium omnis illum nulla architecto doloribus.",
         colors: [
             {
@@ -106,7 +106,7 @@ const productsData = [
     {
         id: 5,
         title: "Men Western Style Denim Shirt",
-        price: "$147",
+        price: "147",
         description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam laborum aut explicabo molestias voluptas, eum nulla doloremque laboriosam. Accusantium omnis illum nulla architecto doloribus.",
         colors: [
             {
@@ -120,7 +120,7 @@ const productsData = [
     {
         id: 6,
         title: "Men Casual USA Print Tee",
-        price: "$80",
+        price: "80",
         description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam laborum aut explicabo molestias voluptas, eum nulla doloremque laboriosam. Accusantium omnis illum nulla architecto doloribus.",
         colors: [
             {
@@ -134,7 +134,7 @@ const productsData = [
     {
         id: 7,
         title: "Men Casual Short Sleeve Polo",
-        price: "$62",
+        price: "62",
         description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam laborum aut explicabo molestias voluptas, eum nulla doloremque laboriosam. Accusantium omnis illum nulla architecto doloribus.",
         colors: [
             {
@@ -148,7 +148,7 @@ const productsData = [
     {
         id: 8,
         title: "Men Summer Leaf Pattern T-Shirt",
-        price: "$70",
+        price: "70",
         description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam laborum aut explicabo molestias voluptas, eum nulla doloremque laboriosam. Accusantium omnis illum nulla architecto doloribus.",
         colors: [
             {
