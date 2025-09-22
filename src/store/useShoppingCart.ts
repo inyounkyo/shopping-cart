@@ -1,27 +1,36 @@
-import { create } from 'zustand';
-// TYPE'S 
-import { ProductTy, ColorsTy } from '@/types';
+import { create } from "zustand";
+// TYPE'S
+import { CartItemTy } from "@/types";
 
-const useShoppingCart = create((set, get) => ({
+interface ShoppingCartTy {
+  addItems: CartItemTy[];
+  addCart: (addItem: CartItemTy) => void;
+  deleteCartItem: (id: string, color: string) => void;
+  updateQuantity: (id: string, qty: number) => void;
+}
+
+const useShoppingCart = create<ShoppingCartTy>((set) => ({
   addItems: [],
-  addCart: (addItem) => set((state) => 
-    ({ 
-        addItems: [...state.addItems, addItem]
-    })), 
-
-  deleteCartItem: (id) => set((state) => 
-    ({ 
-        addItems: state.addItems.filter((item)=> item.id !== id),
+  addCart: (addItem: CartItemTy) =>
+    set((state) => ({
+      addItems: [...state.addItems, addItem],
     })),
 
-  updateQuantity: (id, qty) => set((state) => 
-    (
-      { 
-        addItems: state.addItems.map((item)=> item.id === id
-                                        ? {...item, quantity:qty} : item) ,
+  deleteCartItem: (id: string, color: string) =>
+    set((state) => ({
+      addItems: state.addItems.filter(
+        (item) => item.id !== id || item.color != color
+      ),
     })),
 
-  reset: () => set({ count: 0 }), // Action to reset
+  updateQuantity: (id: string, qty: number) =>
+    set((state) => ({
+      addItems: state.addItems.map((item) =>
+        item.id === id ? { ...item, quantity: qty } : item
+      ),
+    })),
+
+  // reset: () => set({ count: 0 }), // Action to reset
 }));
 
 export default useShoppingCart;
